@@ -11,7 +11,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 3em;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", cursive;
 }
 
 h3 {
