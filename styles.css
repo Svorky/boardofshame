@@ -24,7 +24,7 @@ h3 {
     font-family: "Comic Sans MS", "Comic Sans", "Chalkboard";
 }
 
-section {
+.board {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -49,3 +49,34 @@ p {
     /* margin: 0 auto; */
     /* text-align: -webkit-center; */
 }
+
+@media only screen 
+    and (max-width: 414px)
+    /* and (-webkit-device-pixel-ratio: 2) */
+{ 
+    .board {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        max-height: none;
+        max-height: none;
+        text-align:initial;
+    }
+
+    p {
+        margin: 0 0 0.2em 0;
+        padding-right: 0px;
+        padding-left: 10px;
+        font-size: 1.5em;
+        display: flex;
+    }
+
+    h3 {
+        display: flex;
+        /* justify-content: center; */
+        font-size: 1.5em;
+        font-family: "Comic Sans MS", "Comic Sans", "Chalkboard";
+        padding-left: 10px;
+    }
+ }
