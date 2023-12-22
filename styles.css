@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: -webkit-center;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Shantell Sans', cursive; */
+    --font-family: 'Shantell Sans', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 }
 
 * {
@@ -13,7 +16,7 @@ h1 {
     /* display: flex; */
     /* justify-content: center; */
     font-size: 3em;
-    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard";
+    font-family: var(--font-family);
     /* text-align: -webkit-center; */
 }
 
@@ -21,7 +24,7 @@ h3 {
     display: flex;
     /* justify-content: center; */
     font-size: 1.5em;
-    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard";
+    font-family: var(--font-family);
 }
 
 .board {
@@ -76,7 +79,7 @@ p {
         display: flex;
         /* justify-content: center; */
         font-size: 1.5em;
-        font-family: "Comic Sans MS", "Comic Sans", "Chalkboard";
+        font-family: var(--font-family);
         padding-left: 10px;
     }
  }
