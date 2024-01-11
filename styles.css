@@ -43,7 +43,7 @@ h3 {
     /* align-content: center; */
     max-height: 80vh;
     max-height: 80svh;
-    /* text-align:center; */
+    text-align:left;
     margin: 0 auto;
 }
 
