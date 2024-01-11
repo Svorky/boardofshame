@@ -8,7 +8,8 @@ body {
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 h1 {
@@ -21,6 +22,8 @@ h1 {
 }
 
 h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /* justify-content: center; */
     font-size: 1.5em;
@@ -28,9 +31,15 @@ h3 {
 }
 
 .board {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     /* align-content: center; */
     max-height: 80vh;
     max-height: 80svh;
@@ -42,6 +51,8 @@ p {
     margin: 0 0 0.2em 0;
     padding-right: 20px;
     font-size: 1.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -58,9 +69,15 @@ p {
     /* and (-webkit-device-pixel-ratio: 2) */
 { 
     .board {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
         /* align-content: center; */
         max-height: none;
         max-height: none;
@@ -72,10 +89,14 @@ p {
         padding-right: 0px;
         padding-left: 10px;
         font-size: 1.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     h3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         /* justify-content: center; */
         font-size: 1.5em;
