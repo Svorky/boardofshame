@@ -44,6 +44,7 @@ h3 {
     max-height: 80vh;
     max-height: 80svh;
     /* text-align:center; */
+    margin: 0 auto;
 }
 
 
@@ -57,11 +58,7 @@ p {
 }
 
 .container {
-    display: inline;
-    /* align-items: center; */
-    /* flex-direction: column; */
-    /* margin: 0 auto; */
-    /* text-align: -webkit-center; */
+    display: grid;
 }
 
 .user-container {
@@ -91,6 +88,7 @@ p {
         max-height: none;
         max-height: none;
         text-align:initial;
+        margin: 0 auto;
     }
 
     p {
