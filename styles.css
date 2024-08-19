@@ -1,15 +1,17 @@
-body {
-    margin: 0;
-    padding: 0;
-    text-align: -webkit-center;
-    font-family: 'Inter', sans-serif;
-    /* font-family: 'Shantell Sans', cursive; */
-    --font-family: 'Shantell Sans', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-}
-
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 98%;
+    width: 100svw;
+    /* text-align: -webkit-center; */
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Shantell Sans', cursive; */
+    --font-family: 'Shantell Sans', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 }
 
 h1 {
@@ -22,10 +24,6 @@ h1 {
 }
 
 h3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* justify-content: center; */
     font-size: 1.5em;
     font-family: var(--font-family);
 }
@@ -33,7 +31,7 @@ h3 {
 .board {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -44,21 +42,37 @@ h3 {
     max-height: 80vh;
     max-height: 80svh;
     text-align:left;
-    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.board2 {
+    max-height: 80vh;
+    max-height: 80svh;
+    max-width: 100svw;
+    display: inline-flex;
+}
+
+.board3 {
+
+}
+
+.users {
+
 }
 
 
 p {
     margin: 0 0 0.2em 0;
     padding-right: 20px;
-    font-size: 1.5em;
+    font-size: 1.4em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
 .container {
-    display: grid;
+    display: block;
+    text-align: center;
 }
 
 .user-container {
