@@ -2,7 +2,6 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1350px;
-	font-family: 'Times New Roman', serif;
 	font-size: 18px;
 }
 
@@ -16,8 +15,30 @@ h2 {
 	font-size: 1.5em;
 }
 
-h1,h2 {
+a {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-decoration-skip-ink: none;
+}
+
+.shame h1,h2 {
 	font-family: 'Comic Sans MS', sans-serif;
+}
+
+.shame li {
+	font-family: 'Times New Roman', serif;
+}
+.shame a {
+	color: #0f0;
+}
+
+.glory h1 {
+	font-family: Courier New, serif;
+}
+
+.glory li {
+	font-family: Arial, sans-serif;
 }
 
 #board {
@@ -27,9 +48,6 @@ h1,h2 {
 }
 
 img {
-	/*position: fixed;
-	bottom: 50px;
-	right: 50px;*/
 	margin: 1em auto;
 	display: block;
 }
