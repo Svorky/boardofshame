@@ -23,7 +23,7 @@ a {
 }
 
 .shame h1,h2 {
-	font-family: 'Comic Sans MS', sans-serif;
+	font-family: 'Shantell Sans', 'Comic Sans MS', sans-serif; /*взять шрифты из доски svorky.github.io/boardofshame/*/
 }
 
 .shame {
