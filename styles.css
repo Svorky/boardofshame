@@ -51,3 +51,8 @@ img {
 	margin: 1em auto;
 	display: block;
 }
+
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("font.woff2") format("woff2");
+}
