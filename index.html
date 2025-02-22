@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Доска позора НЯК</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Shantell+Sans&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <script type="module" src="script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <h1>ДОСКА ПОЗОРА НЯК</h1>
-            <!-- <div class="user-container"> -->
-                <section id="board" class="board">
-                </section>
-            <!-- </div> -->
-        </div>
-    </body>
+<html lang="ru">
+	<head>
+		<title>Доска позора НЯК</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="canonical" href="https://ommgl.github.io/boardofshame/">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+		var i = 0;
+		function style() {
+			let style1 = 'color: red; background-color: blue;'
+			let style2 = 'color: blue; background-color: red;'
+			if(i%2 == 0) document.body.style = style1;
+			else document.body.style = style2;
+			i++;
+		}
+		window.addEventListener("load", async (event) => {
+			const response = await fetch("shame_data.json")
+			const data = await response.json()
+			let board = document.getElementById("board")
+			board.innerHTML = data.board.map(item => `<li>${item}`).join('')
+			board.innerHTML += "<h2>Чистилище</h2>" //без h2 и section
+			board.innerHTML += data.limbo.map(item => `<li>${item}`).join('')
+			style();
+			setInterval(style, 3000);
+		});
+		</script>
+	</head>
+	<body class="shame">
+		<h1>ДОСКА ПОЗОРА НЯК</h1>
+		<a href="glory.html">Доска почёта</a>
+		<noscript><p>Доска позора не работает без javascript. К сожалению.</p></noscript>
+		<ol id="board"></ol>
+		<img src="smile.gif" alt="Смайлик, долбящийся об стенку">
+	</body>
 </html>

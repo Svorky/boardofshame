@@ -1,112 +1,109 @@
-* {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 98%;
-    width: 100svw;
-    /* text-align: -webkit-center; */
-    font-family: 'Inter', sans-serif;
-    /* font-family: 'Shantell Sans', cursive; */
-    --font-family: 'Shantell Sans', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+body {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1350px;
+	font-size: 18px;
 }
 
 h1 {
-    /* width: 1000px; */
-    /* display: flex; */
-    /* justify-content: center; */
-    font-size: 3em;
-    font-family: var(--font-family);
-    /* text-align: -webkit-center; */
+	font-size: 3em;
+	text-align: center;
+	margin: 0.5em 0;
 }
 
-h3 {
-    font-size: 1.5em;
-    font-family: var(--font-family);
+h2 {
+	font-size: 1.5em;
+	margin-left: -15px;
+	/*огонь*/
+	text-shadow: 0 0 20px crimson, 0 0 20px crimson, 0 0 10px crimson, 5px -10px 10px orange, -5px -10px 10px yellow;
+    animation: 2s amazing infinite alternate linear;
 }
 
-.board {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    /* align-content: center; */
-    max-height: 80vh;
-    max-height: 80svh;
-    text-align:left;
-    padding: 0 15px;
+a {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-decoration-skip-ink: none;
 }
 
-
-p {
-    margin: 0 0 0.2em 0;
-    padding-right: 20px;
-    font-size: 1.4em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.shame h1,h2 {
+	font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.container {
-    display: block;
-    text-align: center;
+.shame {
+	font-family: 'Times New Roman', serif;
+}
+.shame a {
+	color: #0f0;
 }
 
-.user-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+.glory h1 {
+	font-family: Courier New, serif;
 }
 
-@media only screen 
-    and (max-width: 700px)
-    /* and (-webkit-device-pixel-ratio: 2) */
-{ 
-    .board {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-        /* align-content: center; */
-        max-height: none;
-        max-height: none;
-        text-align:left;
-        margin: 0 auto;
+.glory {
+	font-family: Arial, sans-serif;
+}
+
+#board {
+	column-width: 150px;
+	column-gap: 50px;
+	padding: 0 0 0 30px;
+}
+
+img {
+	margin: 1em auto;
+	display: block;
+}
+
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("font.woff2") format("woff2");
+}
+
+/*костыль*/
+@media (max-width: 1100px) and (min-width: 1050px) {
+    body {
+        width: 1050px;
+		box-sizing: border-box;
     }
+}
 
-    p {
-        margin: 0 0 0.2em 0;
-        padding-right: 0px;
-        padding-left: 10px;
-        font-size: 1.5em;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    h3 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        /* justify-content: center; */
-        font-size: 1.5em;
-        font-family: var(--font-family);
-        padding-left: 10px;
-    }
- }
+/*огонь*/
+@keyframes amazing {
+  0%   { 
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 10px orange,
+    0 0 10px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow; 
+  }
+  25%   { 
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 20px orange,
+    -5px -5px 5px yellow,
+    5px -10px 10px yellow,
+    -5px -10px 10px yellow; 
+  }
+  50%   { 
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 10px orange,
+    0 0 10px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow; 
+  }
+  75%   { 
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 20px orange,
+    -5px -5px 5px yellow,
+    5px -10px 10px yellow,
+    -5px -10px 10px yellow; 
+  }
+  100%   { 
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+    0 0 10px orange,
+    0 0 10px darkorange,
+    -5px -5px 5px yellow,
+    10px -10px 10px yellow; 
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Доска почёта НЯК</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="canonical" href="https://ommgl.github.io/boardofshame/glory.html">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+		window.addEventListener("load", async (event) => {
+			const response = await fetch("glory_data.json")
+			const data = await response.json()
+			let board = document.getElementById("glory")
+			board.innerHTML = data.map(item => `<p><b>${item.name}</b> – <i>${item.comment}</i></p>`).join('')
+		});
+		</script>
+	</head>
+	<body class="glory">
+		<h1>ДОСКА ПОЧЁТА НЯК</h1>
+		<a href=".">Доска позора</a>
+		<noscript><p>Доска почёта не работает без javascript. К сожалению.</p></noscript>
+		<div id="glory"></div>
+	</body>
+</html>
