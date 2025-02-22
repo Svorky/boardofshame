@@ -1,129 +1,510 @@
 {
   "board": [
-	"Мария Гильфанова (nmapsmary)",
-	"yndx-marina",
-	"Агент Справочник",
-	"yndx-dobby",
-	"thegreatquack17",
-	"twejjki",
-	"anws11",
-	"Marymud10",
-	"yndx-castor",
-	"<del>aalisa.safina</del>",
-	"Никита Патин (gazonnnnn96)",
-	"yndx-kraz",
-	"demenevaelizabeth",
-	"yndx-tbredina",
-	"E. (katprokh)",
-	"w3from",
-	"irina-sidygina",
-	"aiskhaidarova",
-	"yndx-mebsuta",
-	"ann250596",
-	"Valta01",
-	"pidanovaaa",
-	"lipatnikov.den",
-	"raevska.k",
-	"Евгения К. (ya.lady-janny)",
-	"ale4ka.azar",
-	"@yaKonovalov",
-	"@iambackend",
-	"@AlexandrBoom",
-	"indx-yllianna.b",
-	"yndx-mensa",
-	"yndx-sovklma",
-	"mariya.chuykina",
-	"olyasolodova96",
-	"Настя (aponizovtseva)",
-	"Валерия Горбунова (lpg7962)",
-	"yndx-kadani-world",
-	"yndx-omnium",
-	"e.paliewa",
-	"Denis Trunin (ichbingut / moomind)",
-	"Chekasin Max (kakacha44)",
-	"yndx-kardinal",
-	"yndx-nikitenko",
-	"Юлия Олейник (yliya1783)",
-	"Кристина К. (c.crivoscheeva2011)",
-	"polumna13lovegood",
-	"Valeria.xmelevskaya",
-	"Weuloy46",
-	"yndx-vnik-world",
-	"yndx-Inimatov",
-	"Федор Иванов (fedor-ivanov1990)",
-	"yndx-pvcr",
-	"yndx-mira",
-	"sinekoul",
-	"yndx-selenga",
-	"yndx-seal",
-	"yndx-neville",
-	"e.paliewa (2-й раз)",
-	"predicadior",
-	"yndx-corrundum",
-	"yndx-sparrow",
-	"yndx-titanium",
-	"yndx-severus",
-	"Ninel Muchirinova (purpleus)",
-	"yndx-ovinnik",
-	"Ilya A. (ilya.antr)",
-	"yndx-avalon",
-	"yndx-selene",
-	"yndx-solo",
-	"yndx-anabat",
-	"yndx-aventurine",
-	"yndx-fox",
-	"yndx-yaml",
-	"yndx-aldan",
-	"yndx-spiral",
-	"yndx-parcec",
-	"yndx-nadiopt",
-	"yndx-carnelian",
-	"RammFan (yndx-rammfan)",
-	"yndx-farson",
-	"yndx-todoroki",
-	"yndx-fides",
-	"ks-blanchard",
-	"mapping421",
-	"yndx-samarium",
-	"yndx-krypton",
-	"yndx-latte",
-	"yndx-piwib",
-	"yndx-huor",
-	"yndx-halo",
-	"yndx-atlantida",
-	"Nikita Iozhits (super.valiakhmetov)",
-	"sadenjevsvyatoslav",
-	"yndx-feather",
-	"yndx-cassiopeia",
-	"yndx-artmokh",
-	"yndx-meowth",
-	"yndx-garmo",
-	"AnutkaUtochkina",
-	"yndx-vulpix"
+    {
+      "name": "Мария Гильфанова (nmapsmary)",
+      "link": ""
+    },
+    {
+      "name": "yndx-marina",
+      "link": ""
+    },
+    {
+      "name": "Агент Справочник",
+      "link": ""
+    },
+    {
+      "name": "yndx-dobby",
+      "link": ""
+    },
+    {
+      "name": "thegreatquack17",
+      "link": ""
+    },
+    {
+      "name": "twejjki",
+      "link": ""
+    },
+    {
+      "name": "anws11",
+      "link": ""
+    },
+    {
+      "name": "Marymud10",
+      "link": ""
+    },
+    {
+      "name": "yndx-castor",
+      "link": ""
+    },
+    {
+      "name": "<del>aalisa.safina</del>",
+      "link": ""
+    },
+    {
+      "name": "Никита Патин (gazonnnnn96)",
+      "link": ""
+    },
+    {
+      "name": "yndx-kraz",
+      "link": ""
+    },
+    {
+      "name": "demenevaelizabeth",
+      "link": ""
+    },
+    {
+      "name": "yndx-tbredina",
+      "link": ""
+    },
+    {
+      "name": "E. (katprokh)",
+      "link": ""
+    },
+    {
+      "name": "w3from",
+      "link": ""
+    },
+    {
+      "name": "irina-sidygina",
+      "link": ""
+    },
+    {
+      "name": "aiskhaidarova",
+      "link": ""
+    },
+    {
+      "name": "yndx-mebsuta",
+      "link": ""
+    },
+    {
+      "name": "ann250596",
+      "link": ""
+    },
+    {
+      "name": "Valta01",
+      "link": ""
+    },
+    {
+      "name": "pidanovaaa",
+      "link": ""
+    },
+    {
+      "name": "lipatnikov.den",
+      "link": ""
+    },
+    {
+      "name": "raevska.k",
+      "link": ""
+    },
+    {
+      "name": "Евгения К. (ya.lady-janny)",
+      "link": ""
+    },
+    {
+      "name": "ale4ka.azar",
+      "link": ""
+    },
+    {
+      "name": "@yaKonovalov",
+      "link": ""
+    },
+    {
+      "name": "@iambackend",
+      "link": ""
+    },
+    {
+      "name": "@AlexandrBoom",
+      "link": ""
+    },
+    {
+      "name": "indx-yllianna.b",
+      "link": ""
+    },
+    {
+      "name": "yndx-mensa",
+      "link": ""
+    },
+    {
+      "name": "yndx-sovklma",
+      "link": ""
+    },
+    {
+      "name": "mariya.chuykina",
+      "link": ""
+    },
+    {
+      "name": "olyasolodova96",
+      "link": ""
+    },
+    {
+      "name": "Настя (aponizovtseva)",
+      "link": ""
+    },
+    {
+      "name": "Валерия Горбунова (lpg7962)",
+      "link": ""
+    },
+    {
+      "name": "yndx-kadani-world",
+      "link": ""
+    },
+    {
+      "name": "yndx-omnium",
+      "link": ""
+    },
+    {
+      "name": "e.paliewa",
+      "link": ""
+    },
+    {
+      "name": "Denis Trunin (ichbingut / moomind)",
+      "link": ""
+    },
+    {
+      "name": "Chekasin Max (kakacha44)",
+      "link": ""
+    },
+    {
+      "name": "yndx-kardinal",
+      "link": ""
+    },
+    {
+      "name": "yndx-nikitenko",
+      "link": ""
+    },
+    {
+      "name": "Юлия Олейник (yliya1783)",
+      "link": ""
+    },
+    {
+      "name": "Кристина К. (c.crivoscheeva2011)",
+      "link": ""
+    },
+    {
+      "name": "polumna13lovegood",
+      "link": ""
+    },
+    {
+      "name": "Valeria.xmelevskaya",
+      "link": ""
+    },
+    {
+      "name": "Weuloy46",
+      "link": ""
+    },
+    {
+      "name": "yndx-vnik-world",
+      "link": ""
+    },
+    {
+      "name": "yndx-Inimatov",
+      "link": ""
+    },
+    {
+      "name": "Федор Иванов (fedor-ivanov1990)",
+      "link": ""
+    },
+    {
+      "name": "yndx-pvcr",
+      "link": ""
+    },
+    {
+      "name": "yndx-mira",
+      "link": ""
+    },
+    {
+      "name": "sinekoul",
+      "link": ""
+    },
+    {
+      "name": "yndx-selenga",
+      "link": ""
+    },
+    {
+      "name": "yndx-seal",
+      "link": ""
+    },
+    {
+      "name": "yndx-neville",
+      "link": ""
+    },
+    {
+      "name": "e.paliewa (2-й раз)",
+      "link": ""
+    },
+    {
+      "name": "predicadior",
+      "link": ""
+    },
+    {
+      "name": "yndx-corrundum",
+      "link": ""
+    },
+    {
+      "name": "yndx-sparrow",
+      "link": ""
+    },
+    {
+      "name": "yndx-titanium",
+      "link": ""
+    },
+    {
+      "name": "yndx-severus",
+      "link": ""
+    },
+    {
+      "name": "Ninel Muchirinova (purpleus)",
+      "link": ""
+    },
+    {
+      "name": "yndx-ovinnik",
+      "link": ""
+    },
+    {
+      "name": "Ilya A. (ilya.antr)",
+      "link": ""
+    },
+    {
+      "name": "yndx-avalon",
+      "link": ""
+    },
+    {
+      "name": "yndx-selene",
+      "link": ""
+    },
+    {
+      "name": "yndx-solo",
+      "link": ""
+    },
+    {
+      "name": "yndx-anabat",
+      "link": ""
+    },
+    {
+      "name": "yndx-aventurine",
+      "link": ""
+    },
+    {
+      "name": "yndx-fox",
+      "link": ""
+    },
+    {
+      "name": "yndx-yaml",
+      "link": ""
+    },
+    {
+      "name": "yndx-aldan",
+      "link": ""
+    },
+    {
+      "name": "yndx-spiral",
+      "link": ""
+    },
+    {
+      "name": "yndx-parcec",
+      "link": ""
+    },
+    {
+      "name": "yndx-nadiopt",
+      "link": ""
+    },
+    {
+      "name": "yndx-carnelian",
+      "link": ""
+    },
+    {
+      "name": "RammFan (yndx-rammfan)",
+      "link": ""
+    },
+    {
+      "name": "yndx-farson",
+      "link": ""
+    },
+    {
+      "name": "yndx-todoroki",
+      "link": ""
+    },
+    {
+      "name": "yndx-fides",
+      "link": ""
+    },
+    {
+      "name": "ks-blanchard",
+      "link": ""
+    },
+    {
+      "name": "mapping421",
+      "link": ""
+    },
+    {
+      "name": "yndx-samarium",
+      "link": ""
+    },
+    {
+      "name": "yndx-krypton",
+      "link": ""
+    },
+    {
+      "name": "yndx-latte",
+      "link": ""
+    },
+    {
+      "name": "yndx-piwib",
+      "link": ""
+    },
+    {
+      "name": "yndx-huor",
+      "link": ""
+    },
+    {
+      "name": "yndx-halo",
+      "link": ""
+    },
+    {
+      "name": "yndx-atlantida",
+      "link": ""
+    },
+    {
+      "name": "Nikita Iozhits (super.valiakhmetov)",
+      "link": ""
+    },
+    {
+      "name": "sadenjevsvyatoslav",
+      "link": ""
+    },
+    {
+      "name": "yndx-feather",
+      "link": ""
+    },
+    {
+      "name": "yndx-cassiopeia",
+      "link": ""
+    },
+    {
+      "name": "yndx-artmokh",
+      "link": ""
+    },
+    {
+      "name": "yndx-meowth",
+      "link": ""
+    },
+    {
+      "name": "yndx-garmo",
+      "link": ""
+    },
+    {
+      "name": "AnutkaUtochkina",
+      "link": ""
+    },
+    {
+      "name": "yndx-vulpix",
+      "link": ""
+    },
+    {
+      "name": "yndx-amur",
+      "link": ""
+    },
+    {
+      "name": "Анна",
+      "link": "https://n.maps.yandex.ru/#!/users/d33b665jefnykug7td69vjq7yr"
+    },
+    {
+      "name": "yndx-leonids",
+      "link": "https://n.maps.yandex.ru/#!/users/2898ue78g541jvmhpxm232zx1c"
+    }
   ],
   "limbo": [
-	"lana.leo.29",
-	"alicetregubova",
-	"v.v.3010",
-	"yndx-kalahari",
-	"yndx-manul",
-	"Данил Лялькин (Mentorex Dlyalkin)",
-	"yndx-zemelyanova",
-	"yndx-turin",
-	"yndx-ledum",
-	"yndx-stream",
-	"Yul (yndx-utal1971)",
-	"yndx-smaria-sova",
-	"yndx-rusalka",
-	"yndx-nikitenko",
-	"yndx-seal",
-	"timchenk-vladimi",
-	"yndx-crius",
-	"yndx-barium",
-	"yndx-julit",
-	"yndx-agartha",
-	"Vasil' (yndx-vachkasov-world)",
-	"yndx-theia",
-	"Sand dan Glokta (yndx-abulich)"
+    {
+      "name": "lana.leo.29",
+      "link": ""
+    },
+    {
+      "name": "alicetregubova",
+      "link": ""
+    },
+    {
+      "name": "v.v.3010",
+      "link": ""
+    },
+    {
+      "name": "yndx-kalahari",
+      "link": ""
+    },
+    {
+      "name": "yndx-manul",
+      "link": ""
+    },
+    {
+      "name": "Данил Лялькин (Mentorex Dlyalkin)",
+      "link": ""
+    },
+    {
+      "name": "yndx-zemelyanova",
+      "link": ""
+    },
+    {
+      "name": "yndx-turin",
+      "link": ""
+    },
+    {
+      "name": "yndx-ledum",
+      "link": ""
+    },
+    {
+      "name": "yndx-stream",
+      "link": ""
+    },
+    {
+      "name": "Yul (yndx-utal1971)",
+      "link": ""
+    },
+    {
+      "name": "yndx-smaria-sova",
+      "link": ""
+    },
+    {
+      "name": "yndx-rusalka",
+      "link": ""
+    },
+    {
+      "name": "yndx-nikitenko",
+      "link": ""
+    },
+    {
+      "name": "yndx-seal",
+      "link": ""
+    },
+    {
+      "name": "timchenk-vladimi",
+      "link": ""
+    },
+    {
+      "name": "yndx-crius",
+      "link": ""
+    },
+    {
+      "name": "yndx-barium",
+      "link": ""
+    },
+    {
+      "name": "yndx-julit",
+      "link": ""
+    },
+    {
+      "name": "yndx-agartha",
+      "link": ""
+    },
+    {
+      "name": "Vasil' (yndx-vachkasov-world)",
+      "link": ""
+    },
+    {
+      "name": "yndx-theia",
+      "link": ""
+    },
+    {
+      "name": "Sand dan Glokta (yndx-abulich)",
+      "link": ""
+    }
   ]
 }
