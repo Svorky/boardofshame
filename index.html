@@ -105,7 +105,7 @@
         li.addEventListener("mouseenter", (event) => createTooltip(li, item));
         li.addEventListener("mouseleave", handleOut);
         let isTooltipVisible = false;
-        li.addEventListener("click", (event) => {
+        li.addEventListener("touchstart", (event) => {
           if (isTooltipVisible) {
             if (div) div.remove();
           } else {
