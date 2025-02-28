@@ -57,7 +57,7 @@ h2 {
   font-family: Arial, sans-serif;
 }
 
-#board {
+#shameBoard {
   column-width: 150px;
   column-gap: 50px;
   padding: 0 0 0 30px;

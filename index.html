@@ -50,6 +50,22 @@
       };
 
       /**
+       * @param {string} text
+       * @returns {string}
+       */
+      const makeLinksClickable = (text) => {
+        const urlRegex = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/g;
+
+        return text.replace(urlRegex, (url) => {
+          let link = url;
+          if (!link.startsWith("http")) {
+            link = "http://" + link;
+          }
+          return `<a href="${link}" target="_blank">${url}</a>`;
+        });
+      };
+
+      /**
        * @param {MouseEvent} lievent
        * @param {User} item
        * @returns
@@ -67,7 +83,7 @@
         div.innerHTML = `
         <h3>${tooltipValueCheck(item.name)}</h3>
         <p>Дата добавления: ${tooltipValueCheck(item.created_at)}</p>
-        <p>Причина: ${tooltipValueCheck(item.reason)}</p>
+        <p>Причина: ${makeLinksClickable(tooltipValueCheck(item.reason))}</p>
         <p>Роль: ${tooltipValueCheck(item.user_role)}</p>
       `;
         document.body.appendChild(div);
