@@ -84,7 +84,6 @@
         if (x + div.clientWidth > body) {
           div.style.left = `${liElement.offsetLeft - div.clientWidth - 10}px`;
         } else {
-          console.log(x);
           div.style.left = `${x}px`;
         }
         div.addEventListener("mouseleave", handleOut);
@@ -98,7 +97,7 @@
         const li = document.createElement("li");
         li.classList.add("user");
         if (item.link) {
-          li.innerHTML = `<a href="${item.link}" class="userlink" target="_blank">${item.name}</a>`;
+          li.innerHTML = `<span>${item.name}<a href="${item.link}" class="userlink" target="_blank">&#x1F517;</a></span>`;
         } else {
           li.innerHTML = `<span>${item.name}</span>`;
         }
