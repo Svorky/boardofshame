@@ -15,13 +15,10 @@
        * @property {ListType} list_name
        * @property {string} [created_at]
        * @property {string} [reason]
-       * @property {UserRole} [user_role]
+       * @property {string} [user_role]
        */
       /**
        * @typedef {'shame' | 'limbo' | 'glory'} ListType
-       */
-      /**
-       * @typedef {'Сотрудник' | 'Робот'} UserRole
        */
 
       var i = 0;
@@ -66,20 +63,17 @@
       };
 
       /**
-       * @param {MouseEvent} lievent
+       * @param {HTMLLIElement} liElement
        * @param {User} item
        * @returns
        */
-      const createTooltip = (lievent, item) => {
-        console.log(lievent);
+      const createTooltip = (liElement, item) => {
+        // console.log(lievent);
         const body = document.body.clientWidth;
-        const x =
-          lievent.target.offsetLeft +
-          lievent.target.children[0].offsetWidth +
-          10;
+        const x = liElement.offsetLeft + liElement.children[0].offsetWidth + 10;
 
         // div.style.left = `${x}px`;
-        div.style.top = `${lievent.target.offsetTop}px`;
+        div.style.top = `${liElement.offsetTop}px`;
         div.innerHTML = `
         <h3>${tooltipValueCheck(item.name)}</h3>
         <p>Дата добавления: ${tooltipValueCheck(item.created_at)}</p>
@@ -88,9 +82,7 @@
       `;
         document.body.appendChild(div);
         if (x + div.clientWidth > body) {
-          div.style.left = `${
-            lievent.target.offsetLeft - div.clientWidth - 10
-          }px`;
+          div.style.left = `${liElement.offsetLeft - div.clientWidth - 10}px`;
         } else {
           console.log(x);
           div.style.left = `${x}px`;
@@ -110,10 +102,17 @@
         } else {
           li.innerHTML = `<span>${item.name}</span>`;
         }
-        li.addEventListener("mouseenter", (event) =>
-          createTooltip(event, item)
-        );
+        li.addEventListener("mouseenter", (event) => createTooltip(li, item));
         li.addEventListener("mouseleave", handleOut);
+        let isTooltipVisible = false;
+        li.addEventListener("click", (event) => {
+          if (isTooltipVisible) {
+            if (div) div.remove();
+          } else {
+            createTooltip(li, item);
+          }
+          isTooltipVisible = !isTooltipVisible;
+        });
         return li;
       };
 
