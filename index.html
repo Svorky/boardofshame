@@ -2,56 +2,133 @@
 <html lang="ru">
 
 <head>
-	<title>Доска позора НЯК</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="favicon.png">
-	<link rel="canonical" href="https://ommgl.github.io/boardofshame/">
-	<link rel="stylesheet" href="styles.css">
-	<script>
-		var i = 0;
-		function style() {
-			if(i % 2 == 0) document.body.classList.replace("blue", "red");
-			else document.body.classList.replace("red", "blue");
-			i++;
-		}
-		/**
-		 * @typedef {Object} User
-		 * @property {string} name
-		 * @property {string} [link]
-		 */
-		/**
-		 * @param {User} item
-		 * @returns {string}
-		 */
-		const createLi = (item) => {
-			if(item.link) {
-				return `<li><a href="${item.link}" class="userlink" target="_blank">${item.name}</a></li>`;
-			} else {
-				return `<li>${item.name}</li>`;
-			}
-		};
-		window.addEventListener("load", async (event) => {
-			const response = await fetch("shame_data.json");
-			const data = await response.json();
-			let board = document.getElementById("board");
-			board.innerHTML = data.board.map(user => createLi(user)).join('');
-			board.innerHTML += "<h2>Чистилище</h2>"; //без h2 и section
-			board.innerHTML += data.limbo.map(user => createLi(user)).join('');
-			style();
-			setInterval(style, 3000);
-		});
-	</script>
+  <title>Доска позора НЯК</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://ommgl.github.io/boardofshame/">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /**
+     * @typedef {Object} User
+     * @property {string} name
+     * @property {string} [link]
+     * @property {ListType} list_name
+     * @property {string} [created_at]
+     * @property {string} [reason]
+     * @property {string} [user_role]
+     */
+    /**
+     * @typedef {'shame' | 'limbo' | 'glory'} ListType
+     */
+    /**
+     * @typedef {'Сотрудник' | 'Робот'} UserRole
+     */
+
+    var i = 0;
+    function style() {
+      if(i % 2 == 0) document.body.classList.replace("blue", "red");
+      else document.body.classList.replace("red", "blue");
+      i++;
+    }
+
+    const tooltipValueCheck = (value) => {
+      const text = 'Не известно';
+      if(value === undefined) return text;
+      if(value === null) return text;
+      if(value === "") return text;
+      if(value === "null") return text;
+      return value;
+    };
+
+    const div = document.createElement("div");
+    div.classList.add("tooltip");
+
+    const handleOut = (event) => {
+      // console.log(event);
+      if(event.relatedTarget === div) return;
+      div.remove();
+    };
+
+    /**
+     * @param {MouseEvent} lievent
+     * @param {User} item
+     * @returns
+     */
+    const createTooltip = (lievent, item) => {
+
+      console.log(lievent);
+      const body = document.body.clientWidth;
+      const x = lievent.target.offsetLeft + lievent.target.children[0].offsetWidth + 10;
+
+      // div.style.left = `${x}px`;
+      div.style.top = `${lievent.target.offsetTop}px`;
+      div.innerHTML = `
+        <h3>${tooltipValueCheck(item.name)}</h3>
+        <p>Дата добавления: ${tooltipValueCheck(item.created_at)}</p>
+        <p>Причина: ${tooltipValueCheck(item.reason)}</p>
+        <p>Роль: ${tooltipValueCheck(item.user_role)}</p>
+      `;
+      document.body.appendChild(div);
+      if(x + div.clientWidth > body) {
+        div.style.left = `${lievent.target.offsetLeft - div.clientWidth - 10}px`;
+      } else {
+        console.log(x);
+        div.style.left = `${x}px`;
+      }
+      div.addEventListener("mouseleave", handleOut);
+    };
+
+    /**
+     * @param {User} item
+     * @returns {HTMLLIElement}
+     */
+    const createLi = (item) => {
+      const li = document.createElement("li");
+      li.classList.add("user");
+      if(item.link) {
+        li.innerHTML = `<a href="${item.link}" class="userlink" target="_blank">${item.name}</a>`;
+      } else {
+        li.innerHTML = `<span>${item.name}</span>`;
+      }
+      li.addEventListener("mouseenter", (event) => createTooltip(event, item));
+      li.addEventListener("mouseleave", handleOut);
+      return li;
+    };
+
+    window.addEventListener("load", async (event) => {
+      const response = await fetch("data.json");
+      /** @type {User[]} */
+      const data = await response.json();
+      const board = document.getElementById("board");
+
+      board.append(...data
+        .filter(user => user.list_name === "shame")
+        .map(user => createLi(user)));
+
+      const h2 = document.createElement("h2");
+      h2.textContent = "Чистилище";
+      board.appendChild(h2);
+      // board.innerHTML += "<h2>Чистилище</h2>"; //без h2 и section
+
+      board.append(...data
+        .filter(user => user.list_name === "limbo")
+        .map(user => createLi(user)));
+      style();
+      // setInterval(style, 3000);
+    });
+
+  </script>
 </head>
 
 <body class="shame blue">
-	<h1>ДОСКА ПОЗОРА НЯК</h1>
-	<a href="glory.html" id="gloryLink">Доска почёта</a>
-	<noscript>
-		<p>Доска позора не работает без javascript. К сожалению.</p>
-	</noscript>
-	<ol id="board"></ol>
-	<img src="smile.gif" alt="Смайлик, долбящийся об стенку">
+  <h1>ДОСКА ПОЗОРА НЯК</h1>
+  <a href="glory.html" id="gloryLink">Доска почёта</a>
+  <noscript>
+    <p>Доска позора не работает без javascript. К сожалению.</p>
+  </noscript>
+  <ol id="board"></ol>
+  <img src="smile.gif" alt="Смайлик, долбящийся об стенку">
 </body>
 
 </html>

@@ -68,6 +68,34 @@ img {
   display: block;
 }
 
+.user {
+  position: relative;
+}
+
+.user:hover {
+  cursor: default;
+}
+
+.tooltip {
+  display: block;
+  position: absolute;
+  /* top: 0; */
+  /* left: 100%; */
+  background-color: #f1f1f1;
+  color: black;
+  padding: 5px;
+  border-radius: 6px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  font-size: 0.8em;
+  /* max-width: 200px; */
+}
+
+.user:hover .tooltip {
+  display: block;
+}
+
 .userlink {
   color: inherit;
 }
