@@ -16,9 +16,13 @@
        * @property {string} [created_at]
        * @property {string} [reason]
        * @property {string} [user_role]
+       * @property {UserStatus} [status]
        */
       /**
        * @typedef {'shame' | 'limbo' | 'glory'} ListType
+       */
+      /**
+       * @typedef {'active' | 'deleted' | 'banned'} UserStatus
        */
 
       var i = 0;
@@ -63,6 +67,23 @@
       };
 
       /**
+       * @param {UserStatus} status
+       * @returns {string}
+       */
+      const getUserStatus = (status) => {
+        switch (status) {
+          case "active":
+            return "Пользователь активен";
+          case "deleted":
+            return "Пользователь удалён";
+          case "banned":
+            return "Пользователь забанен";
+          default:
+            return "";
+        }
+      };
+
+      /**
        * @param {HTMLLIElement} liElement
        * @param {User} item
        * @returns
@@ -76,6 +97,7 @@
         div.style.top = `${liElement.offsetTop}px`;
         div.innerHTML = `
         <h3>${tooltipValueCheck(item.name)}</h3>
+        ${item.status ? `<p>${getUserStatus(item.status)}</p>` : ""}
         <p>Дата добавления: ${tooltipValueCheck(item.created_at)}</p>
         <p>Причина: ${makeLinksClickable(tooltipValueCheck(item.reason))}</p>
         <p>Роль: ${tooltipValueCheck(item.user_role)}</p>
@@ -96,10 +118,12 @@
       const createLi = (item) => {
         const li = document.createElement("li");
         li.classList.add("user");
+        const name =
+          item.status === "deleted" ? `<s>${item.name}</s>` : item.name;
         if (item.link) {
-          li.innerHTML = `<span>${item.name}<a href="${item.link}" class="userlink" target="_blank">&#x1F517;</a></span>`;
+          li.innerHTML = `<span>${name}<a href="${item.link}" class="userlink" target="_blank">&#x1F517;</a></span>`;
         } else {
-          li.innerHTML = `<span>${item.name}</span>`;
+          li.innerHTML = `<span>${name}</span>`;
         }
         li.addEventListener("mouseenter", (event) => createTooltip(li, item));
         li.addEventListener("mouseleave", handleOut);
