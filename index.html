@@ -62,7 +62,7 @@
           if (!link.startsWith("http")) {
             link = "http://" + link;
           }
-          return `<a href="${link}" target="_blank">${url}</a>`;
+          return `<a href="${link}" target="_blank">Тык</a>`;
         });
       };
 
@@ -89,20 +89,47 @@
        * @returns
        */
       const createTooltip = (liElement, item) => {
-        // console.log(lievent);
+        div.innerHTML = "";
+        div.style.top = `${liElement.offsetTop}px`;
+
+        let h3 = document.createElement("h3");
+        h3.classList.add("name");
+        h3.textContent = tooltipValueCheck(item.name);
+        div.appendChild(h3);
+
+        if (item.status) {
+          let p = document.createElement("p");
+          p.textContent = getUserStatus(item.status);
+          div.appendChild(p);
+        }
+
+        let p = document.createElement("p");
+        p.textContent = `Дата добавления: ${tooltipValueCheck(
+          item.created_at
+        )}`;
+        div.appendChild(p);
+
+        let divReason = document.createElement("div");
+        divReason.classList.add("reason");
+        divReason.innerHTML = `Причина: ${makeLinksClickable(
+          tooltipValueCheck(item.reason)
+        )}`;
+        div.appendChild(divReason);
+
+        let pRole = document.createElement("p");
+        pRole.textContent = `Роль: ${tooltipValueCheck(item.user_role)}`;
+        div.appendChild(pRole);
+
+        document.body.appendChild(div);
+
         const body = document.body.clientWidth;
         const x = liElement.offsetLeft + liElement.children[0].offsetWidth + 10;
+        const maxWidth = Math.max(
+          div.querySelector("h3"),
+          div.querySelector("div").clientWidth
+        );
+        div.style.width = `${maxWidth}px`;
 
-        // div.style.left = `${x}px`;
-        div.style.top = `${liElement.offsetTop}px`;
-        div.innerHTML = `
-        <h3>${tooltipValueCheck(item.name)}</h3>
-        ${item.status ? `<p>${getUserStatus(item.status)}</p>` : ""}
-        <p>Дата добавления: ${tooltipValueCheck(item.created_at)}</p>
-        <p>Причина: ${makeLinksClickable(tooltipValueCheck(item.reason))}</p>
-        <p>Роль: ${tooltipValueCheck(item.user_role)}</p>
-      `;
-        document.body.appendChild(div);
         if (x + div.clientWidth > body) {
           div.style.left = `${liElement.offsetLeft - div.clientWidth - 10}px`;
         } else {

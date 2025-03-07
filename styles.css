@@ -90,7 +90,16 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   font-size: 0.8em;
-  /* max-width: 200px; */
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.name {
+  text-wrap: auto;
+}
+
+.tooltip .reason {
+  text-wrap: auto;
 }
 
 .user:hover .tooltip {
