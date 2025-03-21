@@ -1,0 +1,1 @@
+export const blockIcon = `<svg width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(4 4)" fill="none"><circle fill="#FC5A5C" cx="7" cy="7" r="7"></circle><path fill="#fff" d="M2 6h10v2H2z"></path></g></svg>`;

@@ -117,7 +117,7 @@ img {
 
 @font-face {
   font-family: "Comic Sans MS";
-  src: url("font.woff2") format("woff2");
+  src: url("public/font.woff2") format("woff2");
 }
 
 /*костыль*/
