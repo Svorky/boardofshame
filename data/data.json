@@ -1084,5 +1084,13 @@
     "created_at": "2025-03-07",
     "reason": "Нарисовала дороги по приграничной полосе.",
     "user_role": "Сотрудник"
+  },
+  {
+    "name": "yndx-salix",
+    "link": "https://n.maps.yandex.ru/#!/users/9028eq76nwx1c3km99bx5byhe8",
+    "list_name": "shame",
+    "created_at": "2025-03-22",
+    "reason": "Не даёт рисовать дорожки в тех местах, где расположены дорожки.",
+    "user_role": "Сотрудник"
   }
 ]
