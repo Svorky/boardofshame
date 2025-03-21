@@ -1026,12 +1026,14 @@
   {
     "name": "Наше старе село (nashestareselo)",
     "reason": "заблокирован по политическим мотивам.",
-    "list_name": "glory"
+    "list_name": "glory",
+    "status": "banned"
   },
   {
     "name": "Никита Медведев (itsbird)",
     "reason": "получил бессрочный бан в героической борьбе за права модераторов.",
-    "list_name": "glory"
+    "list_name": "glory",
+    "status": "banned"
   },
   {
     "name": "quack17 (thegreatquack17)",
