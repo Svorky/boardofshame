@@ -10,6 +10,7 @@
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -22,6 +23,7 @@
 
   h2 {
     padding-right: 27px;
+    min-height: 66px;
 
     a {
       color: inherit;

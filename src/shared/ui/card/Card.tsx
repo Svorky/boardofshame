@@ -7,6 +7,7 @@ import {
   Robot,
   YandexStaff,
 } from "../../assets/icons";
+import Linkify from "linkify-react";
 
 type CardProps = {
   id: number;
@@ -47,8 +48,19 @@ export const Card = (props: CardProps) => {
             Профиль
           </a>
         </p> */}
-        <p>Причина: {formattedUser.reason}</p>
-        <p>{formattedUser.status}</p>
+        <p>
+          Причина:{" "}
+          <Linkify
+            options={{
+              format() {
+                return "Ссылка";
+              },
+            }}
+          >
+            {formattedUser.reason}
+          </Linkify>
+        </p>
+        {/* <p>{formattedUser.status}</p> */}
         <p>Роль: {formattedUser.user_role}</p>
       </div>
     </div>
