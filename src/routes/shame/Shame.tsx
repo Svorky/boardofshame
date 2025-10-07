@@ -9,10 +9,6 @@ export const Shame = () => {
   );
   return (
     <>
-      {/* <a href="pages/glory.html" id="gloryLink" className="top-link">
-        Доска почёта
-      </a> */}
-
       <div className="title">
         <h1>ДОСКА ПОЗОРА НЯК</h1>
       </div>
