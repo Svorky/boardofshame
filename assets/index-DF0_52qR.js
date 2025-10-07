@@ -1,1 +1,0 @@
-import{j as r}from"./index-DbvOxP1q.js";import{d as o,C as n}from"./Card-D2hImeKB.js";function e(){const a=o.filter(t=>t.list_name==="glory");return r.jsxs(r.Fragment,{children:[r.jsx("div",{className:"title",children:r.jsx("h1",{children:"ДОСКА ПОЧЕТА НЯК"})}),r.jsx("div",{className:"board",children:a.map((t,s)=>r.jsx(n,{id:s+1,user:t},s))})]})}const m=e;export{m as component};
