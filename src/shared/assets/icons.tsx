@@ -44,7 +44,13 @@ export const Moderator = () => (
 );
 
 export const Expert = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    fill="none"
+    viewBox="0 0 11 10"
+  >
     <path
       d="M10.863 3.223a.252.252 0 0 0 0-.449L5.752.062a.54.54 0 0 0-.504 0L.138 2.768a.252.252 0 0 0-.001.45l5.111 2.716a.54.54 0 0 0 .504 0L9 4.211v3.693c0 .04.044.063.077.042l.468-.304A1 1 0 0 0 10 6.804V3.68l.863-.458Z"
       fill="#8FCB69"
