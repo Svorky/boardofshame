@@ -1,0 +1,1 @@
+import{j as s}from"./index-DwbGn5Xs.js";import{d as r,C as m}from"./Card-B9Jo2DZe.js";const n=()=>{const e=r.filter(a=>a.list_name==="shame");return s.jsxs(s.Fragment,{children:[s.jsx("div",{className:"title",children:s.jsx("h1",{children:"ДОСКА ПОЗОРА НЯК"})}),s.jsx("div",{className:"board",children:e.map((a,t)=>s.jsx(m,{id:t+1,user:a},t))})]})},c=n;export{c as component};
