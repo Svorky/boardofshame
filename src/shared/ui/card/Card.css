@@ -22,6 +22,11 @@
 
   h2 {
     padding-right: 27px;
+
+    a {
+      color: inherit;
+      font-weight: inherit;
+    }
   }
 
   svg {
