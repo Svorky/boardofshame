@@ -7,6 +7,9 @@ export const Shame = () => {
   const shameData = (data as User[]).filter(
     (user) => user.list_name === "shame"
   );
+  const limboData = (data as User[]).filter(
+    (user) => user.list_name === "limbo"
+  );
   return (
     <>
       <div className="title">
@@ -14,6 +17,14 @@ export const Shame = () => {
       </div>
       <div className="board">
         {shameData.map((user, index) => {
+          return <Card key={index} id={index + 1} user={user} />;
+        })}
+      </div>
+      <h2 className="title" style={{ margin: "50px 0" }}>
+        Чистилище
+      </h2>
+      <div className="board">
+        {limboData.map((user, index) => {
           return <Card key={index} id={index + 1} user={user} />;
         })}
       </div>
