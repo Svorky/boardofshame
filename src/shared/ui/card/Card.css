@@ -1,0 +1,48 @@
+.card {
+  box-sizing: border-box;
+  width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  border-color: darkgray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-title {
+  position: relative;
+  display: flex;
+  margin-bottom: 15px;
+
+  h2 {
+    padding-right: 27px;
+    min-height: 66px;
+
+    a {
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  svg {
+    margin-left: 5px;
+  }
+}
+
+.card-id {
+  position: absolute;
+  right: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

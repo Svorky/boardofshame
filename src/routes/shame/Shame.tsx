@@ -1,0 +1,33 @@
+import "./Shame.css";
+import data from "../../shared/data/data.json";
+import { Card } from "../../shared/ui/card/Card";
+import type { User } from "../../entities/user/model/types";
+
+export const Shame = () => {
+  const shameData = (data as User[]).filter(
+    (user) => user.list_name === "shame"
+  );
+  const limboData = (data as User[]).filter(
+    (user) => user.list_name === "limbo"
+  );
+  return (
+    <>
+      <div className="title">
+        <h1>ДОСКА ПОЗОРА НЯК</h1>
+      </div>
+      <div className="board">
+        {shameData.map((user, index) => {
+          return <Card key={index} id={index + 1} user={user} />;
+        })}
+      </div>
+      <h2 className="title" style={{ margin: "50px 0" }}>
+        Чистилище
+      </h2>
+      <div className="board">
+        {limboData.map((user, index) => {
+          return <Card key={index} id={index + 1} user={user} />;
+        })}
+      </div>
+    </>
+  );
+};

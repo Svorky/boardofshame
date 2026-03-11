@@ -1,0 +1,172 @@
+body {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1350px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.red {
+  color: red;
+  background-color: blue;
+}
+
+.blue {
+  color: blue;
+  background-color: red;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-left: -15px;
+  /*огонь*/
+  text-shadow: 0 0 20px crimson, 0 0 20px crimson, 0 0 10px crimson, 5px -10px 10px orange, -5px -10px 10px yellow;
+  animation: 2s amazing infinite alternate linear;
+}
+
+#gloryLink {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-decoration-skip-ink: none;
+}
+
+.shame h1,
+h2 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.shame {
+  font-family: 'Times New Roman', serif;
+}
+
+.shame #gloryLink {
+  color: #0f0;
+}
+
+.glory h1 {
+  font-family: Courier New, serif;
+}
+
+.glory {
+  font-family: Arial, sans-serif;
+}
+
+#shameBoard {
+  column-width: 150px;
+  column-gap: 50px;
+  padding: 0 0 0 30px;
+}
+
+img {
+  margin: 1em auto;
+  display: block;
+}
+
+.user {
+  position: relative;
+}
+
+.user:hover {
+  cursor: default;
+}
+
+.tooltip {
+  display: block;
+  position: absolute;
+  /* top: 0; */
+  /* left: 100%; */
+  background-color: #f1f1f1;
+  color: black;
+  padding: 5px;
+  border-radius: 6px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  font-size: 0.8em;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.name {
+  text-wrap: auto;
+}
+
+.tooltip .reason {
+  text-wrap: auto;
+}
+
+.user:hover .tooltip {
+  display: block;
+}
+
+.userlink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.userlink:visited {
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("public/font.woff2") format("woff2");
+}
+
+/*костыль*/
+@media (max-width: 1100px) and (min-width: 1050px) {
+  body {
+    width: 1050px;
+    box-sizing: border-box;
+  }
+}
+
+/*огонь*/
+@keyframes amazing {
+  0% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+
+  25% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 20px orange,
+      -5px -5px 5px yellow,
+      5px -10px 10px yellow,
+      -5px -10px 10px yellow;
+  }
+
+  50% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+
+  75% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 20px orange,
+      -5px -5px 5px yellow,
+      5px -10px 10px yellow,
+      -5px -10px 10px yellow;
+  }
+
+  100% {
+    text-shadow: 0 10px 20px crimson, 0 0 20px red,
+      0 0 10px orange,
+      0 0 10px darkorange,
+      -5px -5px 5px yellow,
+      10px -10px 10px yellow;
+  }
+}

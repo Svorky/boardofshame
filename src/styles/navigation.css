@@ -1,0 +1,14 @@
+.bar {
+  display: flex;
+  gap: 10px;
+}
+
+.bar a {
+  color: inherit;
+  font-weight: 400;
+}
+
+.bar a.font-bold {
+  text-decoration: none;
+  font-weight: 600;
+}
